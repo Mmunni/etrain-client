@@ -2,35 +2,29 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import './Header.css';
 import Logo from '../../../../assets/logo/Logo.webp'
+import { Link } from 'react-router-dom';
 
 
 const Header = () => {
     return (
         <div>
-             <Navbar collapseOnSelect expand="lg">
+             <Navbar collapseOnSelect expand="lg" mt-sm-3>
       <Container>
-        <Navbar.Brand href="#home">
+        <Link to="/">
             <img src={Logo} alt="" />
-        </Navbar.Brand>
+        </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ms-auto">
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-            <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
+
+          <Nav className="ms-auto menu">
+            <Link to='/'>Home</Link>
+            <Link to='/courses'>Courses</Link>
+            <Link to='/faq'>FAQ</Link>
+            <Link to='/blog'>Blog</Link>
+            <Link to='/login'>Login</Link>
+            <Link to='/register'>Register</Link>
           </Nav>
           <Nav>
             <Nav.Link href="#deets">More deets</Nav.Link>
