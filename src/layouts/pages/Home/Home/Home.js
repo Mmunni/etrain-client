@@ -14,7 +14,7 @@ const Home = () => {
                 <div className="col-6">
                     <div className="title">
                     <h1>Making Your Childs World Better</h1>
-                    <p>A programming language is a system of notation for writing computer programs. ... Most programming languages are text-based formal languages.</p>
+                    <p>Etrain works with universities and other organizations to offer online courses, certifications, and degrees in a variety of subjects.</p>
                     <button className='btn_1 me-4'>View Course</button>
                     <button className='btn_2'>Get Started</button>
                     </div>
@@ -47,14 +47,14 @@ const Home = () => {
                         <div className="feature-card text-center">
                             <FaGg className='icon'/>
                             <h4>Qualified Trainers</h4>
-                            <p>You can make your futter better if we complete this courses</p>
+                            <p>Our all teachers are qualified they try to learing studens are easy way</p>
                         </div>
                     </div>
                     <div className="col-3">
                         <div className="feature-card text-center">
                             <FaRegLightbulb className='icon'/>
                             <h4>Job Oppurtunity</h4>
-                            <p>You can make your futter better if we complete this courses</p>
+                            <p>If these courses are complete then you can apply anywhere for job</p>
                         </div>
                     </div>
                 </div>
