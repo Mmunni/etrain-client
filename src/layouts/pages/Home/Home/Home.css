@@ -1,3 +1,9 @@
+.pt-100{
+    padding-top: 100px;
+}
+.pb-100{
+    padding-bottom: 100px;
+}
 .title h1{
     font-size: 60px;
     color:#0c2e60;
@@ -7,4 +13,44 @@
     line-height: 22px;
     padding: 15px 0;
     color: #777;
+   
+}
+.feature-title h2{
+    font-size: 40px;
+    color:#0c2e60;
+    font-weight: 900;
+}
+.feature-title p{
+    line-height: 22px;
+    padding-top: 10px;
+    color: #777;
+}
+.feature-card {
+    border: 1px solid #ccc;
+    margin-right: 15px;
+    padding: 50px 20px;
+    transition: .3s;
+}
+.feature-card:hover{
+    border: 1px solid red;
+    background-color: rgb(255, 136, 0);
+}
+
+.icon {
+    background-color: #ccc;
+    border-radius: 50%;
+    line-height: -22px;
+    height: 40px;
+    width: 40px;
+    margin: 15px;
+}
+.feature-card h4{
+    font-size: 22px;
+    margin: 10px 0;
+    color:#0c2e60;
+    font-weight: 700;
+}
+.feature-card p{
+    color: #777;
+    font-size: 15px;
 }
