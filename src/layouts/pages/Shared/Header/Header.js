@@ -49,7 +49,7 @@ const Header = () => {
                     <Button
                       onClick={handelLogOut}
                       className="ms-2"
-                      variant="primary"
+                      variant="outline-warning"
                       size="sm"
                     >
                       Logout
@@ -58,12 +58,12 @@ const Header = () => {
                 ) : (
                   <>
                     <Link className="me-3" to="/login">
-                      <Button variant="primary" size="sm">
+                      <Button variant="outline-warning" size="sm">
                         Login
                       </Button>
                     </Link>
                     <Link to="/register">
-                      <Button variant="primary" size="sm">
+                      <Button variant="outline-warning" size="sm">
                         Register
                       </Button>
                     </Link>
