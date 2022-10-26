@@ -5,10 +5,22 @@ import Navbar from 'react-bootstrap/Navbar';
 import './Header.css';
 import Logo from '../../../../assets/logo/Logo.webp'
 import { Link } from 'react-router-dom';
-import { Button } from 'bootstrap';
+import Button from "react-bootstrap/Button";
+import { useContext } from 'react';
+import { AuthContext } from '../../../../Context/AuthProvider/AuthProvider';
+import { FaUser } from 'react-icons/fa';
+import Image from "react-bootstrap/Image";
 
 
 const Header = () => {
+
+  const { user, logOut } = useContext(AuthContext);
+
+  const handelLogOut = () => {
+    logOut()
+      .then(() => {})
+      .catch((error) => console.error(error));
+  };
     return (
         <div>
              <Navbar collapseOnSelect expand="lg" mt-sm-3>
@@ -24,19 +36,50 @@ const Header = () => {
             <Link to='/courses'>Courses</Link>
             <Link to='/faq'>FAQ</Link>
             <Link to='/blog'>Blog</Link>
-           
-            <Link to='/login'>Login</Link>
-           
-            
-            <Link to='/register'>Register</Link>
             
           </Nav>
+         
           <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
-            </Nav.Link>
-          </Nav>
+              <Nav.Link>
+                {user?.uid ? (
+                  <>
+                    <span>{user?.displayName}</span>
+                    <Button
+                      onClick={handelLogOut}
+                      className="ms-2"
+                      variant="primary"
+                      size="sm"
+                    >
+                      Logout
+                    </Button>
+                  </>
+                ) : (
+                  <>
+                    <Link className="me-3" to="/login">
+                      <Button variant="primary" size="sm">
+                        Login
+                      </Button>
+                    </Link>
+                    <Link to="/register">
+                      <Button variant="primary" size="sm">
+                        Register
+                      </Button>
+                    </Link>
+                  </>
+                )}
+              </Nav.Link>
+              <Nav.Link>
+                {user?.photoURL ? (
+                  <Image
+                    roundedCircle
+                    src={user?.photoURL}
+                    style={{ height: "30px" }}
+                  ></Image>
+                ) : (
+                  <FaUser></FaUser>
+                )}
+              </Nav.Link>
+            </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
