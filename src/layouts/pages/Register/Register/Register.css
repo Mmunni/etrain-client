@@ -1,0 +1,14 @@
+.form-card {
+    padding: 30px 50px;
+    width: 50%;
+    /* margin: 50px auto; */
+    border: 1px solid #f0f4f6;
+    transition: .3s;
+}
+.form-card:hover{ 
+    border: 1px solid #ff663b;
+}
+
+btn_1:hover{
+    background-color: red;
+  }

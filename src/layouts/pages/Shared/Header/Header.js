@@ -5,6 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import './Header.css';
 import Logo from '../../../../assets/logo/Logo.webp'
 import { Link } from 'react-router-dom';
+import { Button } from 'bootstrap';
 
 
 const Header = () => {
@@ -23,8 +24,12 @@ const Header = () => {
             <Link to='/courses'>Courses</Link>
             <Link to='/faq'>FAQ</Link>
             <Link to='/blog'>Blog</Link>
+           
             <Link to='/login'>Login</Link>
+           
+            
             <Link to='/register'>Register</Link>
+            
           </Nav>
           <Nav>
             <Nav.Link href="#deets">More deets</Nav.Link>
