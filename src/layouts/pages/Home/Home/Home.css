@@ -50,7 +50,13 @@
     color:#0c2e60;
     font-weight: 700;
 }
-.feature-card p{
+.feature-card p, .learning-title p{
     color: #777;
     font-size: 15px;
+}
+.learning-title h2{
+    font-size: 35px;
+    color:#0c2e60;
+    font-weight: 700;
+    margin-bottom: 15px;
 }

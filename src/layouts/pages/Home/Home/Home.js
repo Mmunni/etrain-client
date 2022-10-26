@@ -1,6 +1,7 @@
 import React from 'react';
 import './Home.css';
-import Banner from '../../../../assets/banner/Banner_img.webp'
+import Banner from '../../../../assets/banner/Banner_img.webp';
+import Learning from '../../../../assets/learning/Learning_img.webp'
 import { FaGg, FaGraduationCap, FaRegLightbulb } from 'react-icons/fa';
 
 const Home = () => {
@@ -55,6 +56,22 @@ const Home = () => {
                             <h4>Job Oppurtunity</h4>
                             <p>You can make your futter better if we complete this courses</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+            {/* learning with love area */}
+            <div className="row  pb-100">
+                <div className="learning-area d-flex justify-content-center align-items-center">
+                    <div className="col-6">
+                        <div className="learning-img">
+                            <img className='img-fluid' src={Learning} alt="" />
+                        </div>
+                    </div>
+                    <div className="col-6">
+                            <div className="learning-title">
+                            <h2>Learning with Love and Laughter</h2>
+                            <p>A programming language is a system of notation for writing computer programs. ... Most programming languages are text-based formal languages.</p>
+                            </div>
                     </div>
                 </div>
             </div>
