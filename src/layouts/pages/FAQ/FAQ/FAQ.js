@@ -6,6 +6,9 @@ import './FAQ.css'
 const FAQ = () => {
     return (
         <div>
+          <h1 className='text-center my-5'>
+          Frequently Asked Questions
+          </h1>
             <div className="container my-5">
             <Accordion defaultActiveKey={['0']} alwaysOpen>
       <Accordion.Item eventKey="0">

@@ -23,7 +23,9 @@ const Header = () => {
   };
     return (
         <div>
-             <Navbar collapseOnSelect expand="lg" mt-sm-3>
+             <Navbar collapseOnSelect expand="lg" 
+             bg="light"
+          variant="light">
       <Container>
         <Link to="/">
             <img src={Logo} alt="" />
