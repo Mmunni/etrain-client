@@ -26,11 +26,12 @@ const Header = () => {
 
    const toggleMode = () => {
     if(mode === 'light'){
-      console.log('clicked')
-      setMode ('dark')
+      setMode ('dark');
+      
     }
     else{
-      setMode ('light')
+      setMode ('light');
+      
     }
    
    }

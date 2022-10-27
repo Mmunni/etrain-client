@@ -6,7 +6,7 @@ import './FAQ.css'
 const FAQ = () => {
     return (
         <div>
-          <h1 className='text-center my-5'>
+          <h1 className='text-center my-5 faq-title'>
           Frequently Asked Questions
           </h1>
             <div className="container my-5">

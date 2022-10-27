@@ -1,5 +1,4 @@
 import React from 'react';
-import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
 import './Blog.css';
 
@@ -7,7 +6,7 @@ import './Blog.css';
 const Blog = () => {
     return (
         <div>
-          <h1 className='text-center my-5'>Our Blog</h1>
+          <h1 className='text-center my-5 blog-title'>Our Blog</h1>
             <div className="container my-5">
             <Card className='mb-4'>
       <Card.Header className='header-bg' as="h5">1. what is cors?</Card.Header>

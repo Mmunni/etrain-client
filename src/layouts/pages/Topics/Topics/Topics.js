@@ -12,10 +12,10 @@ const Topics = () => {
             <div className="container">
                 <h1 className='Course-title'>Courses</h1>
                 <div className="row">
-                <div className="col-lg-3 col-sm-12">
+                <div className="col-12 col-lg-2">
                      <LeftSide></LeftSide> 
                 </div>
-                <div className="col-lg-9 col-sm-12 col-12 mb-5">
+                <div className="col-lg-10 col-sm-12 col-12 mb-5">
                      <div className="right-side-card mb-5">
                     {
                         allCourse.map(course => <CourseSummaryCard

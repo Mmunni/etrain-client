@@ -1,7 +1,7 @@
 import React from 'react';
-import { FaRegBookmark, FaRegEye, FaRegStar, FaShareAlt, FaStar } from 'react-icons/fa';
+import { FaRegEye, FaStar } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import Image from 'react-bootstrap/Image';
+
 import Card from 'react-bootstrap/Card';
 import { Button } from 'react-bootstrap';
 import './CourseSummaryCard.css';
@@ -14,7 +14,7 @@ const CourseSummaryCard = ({course}) => {
             <Card >
             <Card.Body>
                 <Card.Img variant="top" src={image_url} />
-                <Card.Title className='text-center Fw-bold fs-3 my-3'>{title}</Card.Title>
+                <Card.Title className='text-center Fw-bold fs-3 my-3 title-card'>{title}</Card.Title>
                 <Card.Text>
                 {
                     details.length > 150 ? 
