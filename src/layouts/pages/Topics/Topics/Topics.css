@@ -4,15 +4,16 @@ h1.Course-title{
     color:#0c2e60;
     text-align: center;
 }
-.rigth-side-card{
+.right-side-card{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    max-height: 100%;
 }
 @media only screen and(max-width: 767px){
-    .rigth-side-card{
-        grid-template-columns:  auto;
+    
+    .right-side-card{
+        display: grid;
+        grid-template-columns:  3fr;
         background-color: red;
        
     }

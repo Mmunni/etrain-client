@@ -10,22 +10,35 @@ import { useContext } from 'react';
 import { AuthContext } from '../../../../Context/AuthProvider/AuthProvider';
 import { FaUser } from 'react-icons/fa';
 import Image from "react-bootstrap/Image";
+import { useState } from 'react';
 
 
 const Header = () => {
 
   const { user, logOut } = useContext(AuthContext);
+  const [mode, setMode] = useState('light')
 
   const handelLogOut = () => {
     logOut()
       .then(() => {})
       .catch((error) => console.error(error));
   };
+
+   const toggleMode = () => {
+    if(mode === 'light'){
+      console.log('clicked')
+      setMode ('dark')
+    }
+    else{
+      setMode ('light')
+    }
+   
+   }
     return (
         <div>
              <Navbar collapseOnSelect expand="lg" 
-             bg="light"
-          variant="light">
+             bg={mode}
+          variant={mode}>
       <Container>
         <Link to="/">
             <img src={Logo} alt="" />
@@ -81,6 +94,9 @@ const Header = () => {
                   <FaUser></FaUser>
                 )}
               </Nav.Link>
+              <span className="form-check form-switch ms-2 mt-2">
+                 <input onClick={toggleMode} className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+              </span>
             </Nav>
         </Navbar.Collapse>
       </Container>

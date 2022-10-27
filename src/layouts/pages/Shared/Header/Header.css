@@ -10,3 +10,10 @@
 .menu a:hover{
     color:  #ee390f;
 }
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    /* background-color: red; */
+}
