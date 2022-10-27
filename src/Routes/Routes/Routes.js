@@ -5,9 +5,10 @@ import FAQ from "../../layouts/pages/FAQ/FAQ/FAQ";
 import Home from "../../layouts/pages/Home/Home/Home";
 import Register from "../../layouts/pages/Register/Register/Register";
 import Login from "../../layouts/pages/Login/Login/Login";
+import Topics from "../../layouts/pages/Topics/Topics/Topics";
 import Courses from "../../layouts/pages/Courses/Courses/Courses";
-import CoursesDetails from "../../layouts/pages/CoursesDetails/CoursesDetails/CoursesDetails";
-import Category from "../../layouts/pages/Courses/Category/Category";
+import Category from "../../layouts/pages/Topics/Category/Category";
+import PrivateRouter from "../PrivateRouter/PrivateRouter";
 export const router = createBrowserRouter([
     {
         path:'/',
@@ -18,19 +19,19 @@ export const router = createBrowserRouter([
                 element:<Home></Home>
             },
             {
-                path: '/courses',
-                 loader: ({params}) => fetch('http://localhost:5000/courses'),
-                element:<Courses></Courses>
+                path: '/topics',
+                 loader: () => fetch('https://etrain-server.vercel.app/courses'),
+                element:<Topics></Topics>
             },
             {
                 path: '/catagory/:id',
                 element: <Category></Category>,
-                loader: ({params}) => fetch(`http://localhost:5000/category/${params.id}`)
+                loader: ({params}) => fetch(`https://etrain-server.vercel.app/category/${params.id}`)
             },
             {
                 path: '/courses/:id',
-                element:<CoursesDetails></CoursesDetails>,
-                loader: ({params}) => fetch(`http://localhost:5000/course/${params.id}`)
+                element:<PrivateRouter><Courses></Courses></PrivateRouter>,
+                loader: ({params}) => fetch(`https://etrain-server.vercel.app/courses/${params.id}`)
             },
             {
                 path: '/faq',

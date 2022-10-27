@@ -35,7 +35,7 @@ const Header = () => {
 
           <Nav className="ms-auto menu">
             <Link to='/'>Home</Link>
-            <Link to='/courses'>Courses</Link>
+            <Link to='/topics'>Courses</Link>
             <Link to='/faq'>FAQ</Link>
             <Link to='/blog'>Blog</Link>
             

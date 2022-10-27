@@ -1,0 +1,17 @@
+.primium-btn{
+    margin-top: 10px;
+}
+.primium-btn a{
+    color: #fff;
+    text-decoration: none;
+}
+.primium-btn a:hover{
+    color: #fff;
+}
+.title-card{
+    color:#0c2e60;
+    margin: 10px 0;
+    font-weight: 700;
+    font-size: 35px;
+}
+

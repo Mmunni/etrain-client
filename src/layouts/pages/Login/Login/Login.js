@@ -6,14 +6,19 @@ import { ButtonGroup } from 'react-bootstrap';
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { FaGoogle, FaGithub} from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../../Context/AuthProvider/AuthProvider';
 const Login = () => {
 
+    const navigate = useNavigate()
     const {signIn, providerLogin} = useContext(AuthContext)
     const [error, setError] = useState('');
+
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
+
+    const location = useLocation()
+      const from = location.state?.from?.pathname || '/';
     
     const handelLogin = (event) => {
         event.preventDefault();
@@ -28,7 +33,7 @@ const Login = () => {
             console.log(user);
             form.reset();
              setError('');
-            //  navigate(from, {replace: true});
+              navigate(from, {replace: true});
           })
           .catch((error) => {
             console.error(" error is ", error);
@@ -60,7 +65,7 @@ const Login = () => {
     }
     return (
         <div>
-            <Form onSubmit={handelLogin} className='container w-50 mt-5 form-card'>
+            <Form onSubmit={handelLogin} className='container w-75 mt-5 form-card'>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control
