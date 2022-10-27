@@ -9,12 +9,11 @@ h1.Course-title{
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
-@media only screen and(max-width: 767px){
+@media only screen and (max-width: 767px){
     
     .right-side-card{
         display: grid;
         grid-template-columns:  3fr;
-        background-color: red;
        
     }
 }
